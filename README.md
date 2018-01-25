@@ -1,6 +1,4 @@
 # BDanielCS.github.io
-At this point in time, this page contains the Jupyter Notebook for The Analysis of Birth Rates among Unmarried Women
+The home page contains all links to individual jupyter notebooks.  To access these notebooks, click the link below.
 
-To access this notebook, simply go to the site listed below...
-
-https://bdanielcs.github.io/Final_Project
+https://bdanielcs.github.io/
