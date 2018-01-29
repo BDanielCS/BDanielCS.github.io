@@ -7,6 +7,7 @@ $(document).ready(function() {
    let fadeInFooter = function() { $("footer").fadeIn(2500); };
 
    hideFadeIns();
+   $("body").show(0);
    setTimeout(fadeInHeader, 100);
    setTimeout(fadeInArticle, 200);
    setTimeout(fadeInFooter, 300);
