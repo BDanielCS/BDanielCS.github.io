@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Personal Analysis</title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="../stylesheets/analysis.css">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="icon" href="http://www.pixempire.com/images/preview/greek-sigma-lowercase-symbol-icon.jpg">
+</head>
+
+<body style="display:none">
+   <!-- Top navbar for home and other projects grouping-->
+   <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+         <div class="navbar-header">
+            <button class="btn btn-danger navbar-btn" onclick="switchHome();">Home</button>
+         </div>
+         
+         <button class="btn btn-danger navbar-btn" onclick="switchSoftware();">Software Development</button>
+      </div>
+   </nav>
+   <!-- Begin main content of page-->
+   <main class="p-3 mb-2 text-dark" style="background-color: #111746">
+      <div class="jumbotron">
+         <h1 class="display-4">Welcome to my Exploratory Analyses!</h1>
+         <p class="lead">
+            This page will be my primary way of presenting and recording all of my analysis-driven projects. My goal is to dive into interesting and current datasets to explore what is happening around our world with the help of cutting edge Machine Learning Models and Applied Statistics.
+         </p>
+         <hr class="my-2">
+         <p>
+            If you have an interesting dataset in mind or questions about any of the posted analyses, feel free to contact me at the email provided
+            <a href="#Contact">below.</a>
+            <br> All write-ups are listed below. To view the full document, simply click on the entry.
+            <br> Enjoy!
+         </p>
+      </div>
+      <article>
+         <!-- Listing out all of the completed analyses-->
+         <div class="list-group">
+            <!--Jupyter item -->
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" onclick="location.href = 'https://bdanielcs.github.io/analyses/Housing_Analysis';">
+               <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Housing Affordability</h5>
+                  <small class="text-muted">Finance</small>
+               </div>
+               <p class="mb-1">
+                  See how homeowners are spending their money based on house
+                  prices and ulities in the four census regions.
+               </p>
+               <small class="text-muted">Personal Analysis</small>
+            </a>
+            <!--Jupyter item -->
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" onclick="location.href = 'https://bdanielcs.github.io/analyses/Final_Project';">
+               <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Life Expectancy of Unmarried Women</h5>
+                  <small class="text-muted">Health</small>
+               </div>
+               <p class="mb-1">
+                  Determine whether over the course of the last 45 years, unmarried women of all ages an nationalities have seen in increase in life expectancy.
+               </p>
+               <small class="text-muted">Personal Analysis</small>
+            </a>
+            <!--Jupyter item -->
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" onclick="location.href = 'https://bdanielcs.github.io/analyses/Project_3';">
+               <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Machine Learning &amp; Global Life Expectancy</h5>
+                  <small class="text-muted">Experimental</small>
+               </div>
+               <p class="mb-1">
+                  See how life expectancy changes throughout different regions 
+                  of the world. Determine whether or not life expectancy seems to be
+                  increasing fasterin technologically advanced areas.
+               </p>
+               <small class="text-muted">Project</small>
+            </a>
+            <!--Jupyter item -->
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" onclick="location.href = 'https://bdanielcs.github.io/analyses/Project_4';">
+               <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Baltimore Crime</h5>
+                  <small class="text-muted">Crime</small>
+               </div>
+               <p class="mb-1">
+                  Understand when crime in Baltimore, MD is at it's peak as well as 
+                  see which age groupings seem to be the most prevalent.
+               </p>
+               <small class="text-muted">Project</small>
+            </a>
+         </div>
+      </article>
+      <br>
+      <br>
+      <!--Personal info bottom section -->
+      <footer>
+         <a name="Contact"></a>
+         <p class="font-italic" style="color:#ffffff">
+            To contact me, send a message to the following email address.
+            <p class="font-weight-bold" style="color:#ffffff">
+               brandonjdaniel96 [at] gmail [dot] com
+            </p>
+            <p style="color:#ffffff">
+               Replace [at] with <strong style="">@</strong> and [dot] with <strong>.</strong>
+            </p>
+            
+         </p>
+      </footer>
+   </main>
+   <!--Required external scripts -->
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TimelineLite.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+   <script scr="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSPlugin.min.js"></script>
+   <script src="../scripts/homeFunctionality.js"></script>
+   <noscript>
+      <h2>Javascript Disabled.</h2>
+      <p>
+         In order to maximize your browsing experience, please enable Javascript for this site.
+         <br> Thank you
+      </p>
+   </noscript>
+</body>
+
+</html>

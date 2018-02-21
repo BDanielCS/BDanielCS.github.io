@@ -1,0 +1,90 @@
+button {
+   display: inline-block;
+   box-sizing: border-box;
+   margin: 0 auto;
+   padding: .2em;
+   font-weight: 400;
+   /*width: 80%;*/
+   max-width: 50em;
+   background: #fff;
+   font-size: 1.75em;
+
+   /* Line around text for readability*/
+   text-shadow: -.03em -.03em 0 #023052,
+   .03em -.03em 0 #023052,
+   -.03em .03em 0 #023052,
+   .03em .03em 0 #023052;
+   /* fallback color for old browsers */
+   background: rgba(255, 255, 255, 0.5);
+   border-radius: .1em;
+   color: #FFFFEB;
+   text-align: center;
+   text-decoration: none;
+   letter-spacing: .1em;
+   transition: all 0.3s ease-out;
+}
+
+button:hover {
+   outline: none;
+   background: #fff;
+   color: #000;
+   transition: all 0.3s ease-in;
+}
+
+body {
+   background: #111746;
+}
+
+main {
+	padding-top: 2.5em;
+}
+
+p {
+	color:#FFF;
+	position: absolute;
+	left: 25%;
+	right: 25%;
+	top: 20%;
+	font-size: 1.5em;
+	background: inherit;
+}
+
+#particles-js {
+   background: #111746;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+}
+
+#titleText {
+   color: #FFFFFA;
+   position: absolute;
+   left: 20%;
+   right: 20%;
+   font-family: 'Hoefler Text', Georgia, 'Times New Roman', serif;
+   letter-spacing: .1em;
+   margin: 0px;
+   text-align: center;
+   padding-bottom: 1em;
+}
+
+.initHidden {
+   opacity: 0;
+}
+
+.frostedTitleBox:before {
+   content: ' ';
+   width: 100%;
+   height: 10%;
+   background: inherit;
+   position: absolute;
+   padding-bottom: 2em;
+   box-shadow: inset 0 2em 0 3em rgba(255, 255, 255, 0.05);
+   filter: blur(10px);
+   z-index: -1;
+}
+
+.frostedTitleBox.initHidden {
+   opacity: 0;
+}
