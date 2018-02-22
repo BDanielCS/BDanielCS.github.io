@@ -19,9 +19,23 @@ $(document).ready(function() {
    let screenWidth = $(window).width();
    let tl = new TimelineLite();
 
+   // stack buttons if on mobile
+   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      widthScalingFactor = 0;
+      widthMovement = screenWidth * widthScalingFactor;
+      heightMovementData = screenHeight * .6;
+      heightMovementSoftware = screenHeight * .8;
+   }else{
+      heightScalingFactor = .6;
+      widthScalingFactor = .1;
+      widthMovement = screenWidth * widthScalingFactor;
+      heightMovementData = screenHeight * heightScalingFactor;
+      heightMovementSoftware = screenHeight * heightScalingFactor;
+   }
+
    // button animation load in
-   tl.to(dataButton, 1.5, {x:screenWidth * -.1, y: screenHeight * .4, autoAlpha: 1, ease: Circ.easeIn})
-      .to(softwareButton, 1.5, {x:screenWidth * .1, y: screenHeight * .4, autoAlpha: 1, ease: Circ.easeIn }, "-=.5")
+   tl.to(dataButton, 1.5, {x:-widthMovement, y: heightMovementData, autoAlpha: 1, ease: Circ.easeIn})
+      .to(softwareButton, 1.5, {x:widthMovement, y: heightMovementSoftware, autoAlpha: 1, ease: Circ.easeIn }, "-=.5")
       .to(titleContainer, 1, {autoAlpha: 1})
       .to(title, 1.5, { autoAlpha: 1 }, "-=.5")
       .to(explainationText, 1, {autoAlpha: 1}, "-=1.3")
