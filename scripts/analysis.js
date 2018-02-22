@@ -43,3 +43,47 @@ function switchSoftware() {
    let page = $("body");
    timeline.to(page, .5, { autoAlpha: 0 });
 }
+
+function crimeSwitch(){
+   let timeline = new TimelineLite({
+      onComplete: function() {
+         document.location.href = "https://bdanielcs.github.io/analyses/Project_4";
+      }
+   });
+
+   let page = $("body");
+   timeline.to(page, .5, { autoAlpha: 0 });
+}
+
+function mlSwitch(){
+   let timeline = new TimelineLite({
+      onComplete: function() {
+         document.location.href = "https://bdanielcs.github.io/analyses/Project_3";
+      }
+   });
+
+   let page = $("body");
+   timeline.to(page, .5, { autoAlpha: 0 });
+}
+
+function cdcSwitch() {
+   let timeline = new TimelineLite({
+      onComplete: function() {
+         document.location.href = "https://bdanielcs.github.io/analyses/Final_Project";
+      }
+   });
+
+   let page = $("body");
+   timeline.to(page, .5, { autoAlpha: 0 });
+}
+
+function housingSwitch() {
+   let timeline = new TimelineLite({
+      onComplete: function() {
+         document.location.href = "https://bdanielcs.github.io/analyses/Housing_Analysis";
+      }
+   });
+
+   let page = $("body");
+   timeline.to(page, .5, { autoAlpha: 0 });
+}
