@@ -6,7 +6,7 @@ $(document).ready(function() {
 	let site = $("#second");
 	let aiProject = $("#third");
 	let foot = $("footer");
-	let trans = new TimelineLite();
+	let trans = new TimelineLite();     
 
 	trans.to(nav, .5, {autoAlpha: 1})
 		.to(header, 1.2, {autoAlpha: 1})
