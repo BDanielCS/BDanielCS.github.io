@@ -24,7 +24,7 @@ $(document).ready(function() {
       .to(softwareButton, 1.5, {x:screenWidth * .1, y: screenHeight * .4, autoAlpha: 1, ease: Circ.easeIn }, "-=.5")
       .to(titleContainer, 1, {autoAlpha: 1})
       .to(title, 1.5, { autoAlpha: 1 }, "-=.5")
-      .to(explainationText, 1, {autoAlpha: 1}, "-=1")
+      .to(explainationText, 1, {autoAlpha: 1}, "-=1.3")
       .to(particleEffect, 3, {autoAlpha: 1}, "-=4");
 
 });
@@ -148,6 +148,12 @@ function switchExploratory(){
    timeline.to(page, .5, {autoAlpha: 0});
 }
 
+//swich to software dev page
 function switchSoftware(){
+let timeline = new TimelineLite({onComplete:function () {
+      document.location.href = "htmlPages/software.html";
+   }});
 
+   let page = $("body");
+   timeline.to(page, .5, {autoAlpha: 0});
 }

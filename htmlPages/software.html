@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Software Development</title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="../stylesheets/software.css">
+   <link rel="stylesheet" type="text/css" href="../stylesheets/analysis.css">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="icon" href="http://www.pixempire.com/images/preview/greek-sigma-lowercase-symbol-icon.jpg">
+</head>
+
+<body>
+   <!-- Top navbar for home and other projects grouping-->
+   <nav class="navbar navbar-inverse" style="opacity: 0">
+      <div class="container-fluid">
+         <div class="navbar-header">
+            <button class="btn btn-danger navbar-btn" onclick="switchHome();">Home</button>
+         </div>
+         <button class="btn btn-danger navbar-btn" onclick="switchAnalysis();">Exploratory Analysis</button>
+      </div>
+   </nav>
+   <!-- main page with projects-->
+   <main >
+      <!-- Welcoming block (jumbotron)-->
+      <div class="jumbotron" style="opacity: 0">
+         <h1><center>Welcome to the Software Development Hub</center></h1>
+         <hr>
+         <p><center>
+            To browse the GitHub repositories of the programs you see below, click the "View Repo" button below the description.
+            <br> Enjoy!
+         </center></p>
+      </div>
+
+      <!--Project Listings here -->
+      <div class="container">
+         <div class="row row-offcanvas row-offcanvas-right">
+            <div class="row">
+            	<!-- PWA description block -->
+               <div class="col-8 col-lg-4" id="first" style="opacity: 0">
+                  <h2><center>Personalized Weather Assistant</center></h2>
+                  <hr>
+                  <p>
+                     The Personalized Weather Assistant (PWA) leverages AWS in order to create a user-tailored personal assistant to predict clothing options based on current weather conditions. PWA grabs a weather profile based off of your desired location and then suggested clothing options based off of an underlying machine learning model.
+                  </p>
+                  <p>
+                     <button onclick="PWA();">View Repo »</button>
+                  </p>
+               </div>
+
+               <!-- AI pathing project -->
+               <div class="col-8 col-lg-4" id="third" style="opacity: 0">
+               	<h2><center>Autonomous Route Traversal</center></h2>
+               	<hr>
+               	<p>
+               		This project focuses on maze navigation using a 
+               		modified version of alpha-beta pruning with
+               		monte carlo rollouts.  The combination of these two
+               		strategies enable the virtual autonomous agent to traverse
+               		a set of mazes without crashing or overshooting the 
+               		goal.  To make navigation more difficult, external forces
+               		are randomly (or intentionally) applied to the agent which
+               		could cause it to move unexpectly into nearby walls.
+               		<br>Coming Soon! 
+               	</p>
+               	<p>
+               		<button onclick="AI();" disabled>View Repo »</button>
+               	</p>
+               </div>
+
+               <!-- This site -->
+               <div class="col-8 col-lg-4" id="second" style="opacity: 0">
+               	<h2><center>Project Portfolio (Wesbite)</center></h2>
+               	<hr>
+               	<p>
+               		As the title suggests, it is the code behind
+               		this site! Feel free to explore the simplistic design
+               		using some of the latest tools in Web-Development.
+               	</p>
+               	<p>
+               		<button onclick="mySite();">View Repo »</button>
+               	</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+   <!--Personal info bottom section -->
+   <footer style="opacity: 0">
+   	<hr>
+      <a name="Contact"></a>
+      <p class="font-italic">
+         To contact me, send a message to the following email address.
+         <p class="font-weight-bold">
+            brandonjdaniel96 [at] gmail [dot] com
+         </p>
+         <p>
+            Replace [at] with <strong style="">@</strong> and [dot] with <strong>.</strong>
+         </p>
+      </p>
+   </footer>
+   <!-- Required external script files -->
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TimelineLite.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+   <script scr="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSPlugin.min.js"></script>
+   <script src="../scripts/software.js"></script>
+</body>
+<!-- Disabled handling -->
+<noscript>
+   <h2>Javascript Disabled.</h2>
+   <p>
+      In order to maximize your browsing experience, please enable Javascript for this site.
+      <br> Thank you
+   </p>
+</noscript>
+
+</html>

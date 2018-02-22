@@ -34,5 +34,12 @@ function switchHome() {
 }
 
 function switchSoftware() {
+   let timeline = new TimelineLite({
+      onComplete: function() {
+         document.location.href = "./software.html";
+      }
+   });
 
+   let page = $("body");
+   timeline.to(page, .5, { autoAlpha: 0 });
 }
