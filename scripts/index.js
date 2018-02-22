@@ -19,12 +19,17 @@ $(document).ready(function() {
    let screenWidth = $(window).width();
    let tl = new TimelineLite();
 
-   // stack buttons if on mobile
    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      // stack buttons if on mobile
       widthScalingFactor = 0;
       widthMovement = screenWidth * widthScalingFactor;
       heightMovementData = screenHeight * .6;
       heightMovementSoftware = screenHeight * .8;
+
+      //make header larger to hold title
+      let header = $("header");
+      header.css("height", "150px");
+
    }else{
       heightScalingFactor = .6;
       widthScalingFactor = .1;
