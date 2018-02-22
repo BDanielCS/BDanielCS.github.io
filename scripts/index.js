@@ -23,8 +23,8 @@ $(document).ready(function() {
       // stack buttons if on mobile
       widthScalingFactor = 0;
       widthMovement = screenWidth * widthScalingFactor;
-      heightMovementData = screenHeight * .6;
-      heightMovementSoftware = screenHeight * .8;
+      heightMovementData = screenHeight * .5;
+      heightMovementSoftware = screenHeight * .5;
 
       //make header larger to hold title
       let header = $("header");
