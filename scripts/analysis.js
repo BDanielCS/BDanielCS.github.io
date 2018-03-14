@@ -1,8 +1,13 @@
 // Fade in functionality on page load
 // load in each item with its successor loading after
 $(document).ready(function() {
+   globalFadeIn();
+});
 
-   let fadeInHeader = function() { $("div.jumbotron").fadeIn(1000); };
+//load the jumbotron, main body text, and bottom
+// section in
+function globalFadeIn(){
+	let fadeInHeader = function() { $("div.jumbotron").fadeIn(1000); };
    let fadeInArticle = function() { $("article").fadeIn(2000); };
    let fadeInFooter = function() { $("footer").fadeIn(2500); };
 
@@ -11,8 +16,7 @@ $(document).ready(function() {
    setTimeout(fadeInHeader, 100);
    setTimeout(fadeInArticle, 200);
    setTimeout(fadeInFooter, 300);
-
-});
+}
 
 function hideFadeIns() {
    $("div.jumbotron").hide(0);
@@ -24,6 +28,9 @@ function switchHome() {
    let timeline = new TimelineLite({
       onComplete: function() {
          document.location.href = "../index.html";
+         $.getScript('index.js', function() {
+            homeScreenFadeIn();
+         });
       }
    });
 
@@ -37,6 +44,9 @@ function switchSoftware() {
    let timeline = new TimelineLite({
       onComplete: function() {
          document.location.href = "./software.html";
+         $.getScript('software.js', function() {
+            globalFadeIn();
+         });
       }
    });
 
@@ -88,4 +98,3 @@ function housingSwitch() {
    timeline.to(page, .5, { autoAlpha: 0 });
 }
 
-window.onunload = function(){};

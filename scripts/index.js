@@ -2,7 +2,12 @@
  * Load in animation of items
  */
 $(document).ready(function() {
+	homeScreenFadeIn();
+});
 
+// start up background animation and
+// begin button animations
+function homeScreenFadeIn() {
    //start particle animation
    configParticles();
 
@@ -19,7 +24,7 @@ $(document).ready(function() {
    let screenWidth = $(window).width();
    let tl = new TimelineLite();
 
-   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   if (isMobile()) {
       // stack buttons if on mobile
       widthScalingFactor = 0;
       widthMovement = screenWidth * widthScalingFactor;
@@ -30,7 +35,7 @@ $(document).ready(function() {
       let header = $("header");
       header.css("height", "150px");
 
-   }else{
+   } else {
       heightScalingFactor = .6;
       widthScalingFactor = .1;
       widthMovement = screenWidth * widthScalingFactor;
@@ -39,14 +44,13 @@ $(document).ready(function() {
    }
 
    // button animation load in
-   tl.to(dataButton, 1.5, {x:-widthMovement, y: heightMovementData, autoAlpha: 1, ease: Circ.easeIn})
-      .to(softwareButton, 1.5, {x:widthMovement, y: heightMovementSoftware, autoAlpha: 1, ease: Circ.easeIn }, "-=.5")
-      .to(titleContainer, 1, {autoAlpha: 1})
+   tl.to(dataButton, 1.5, { x: -widthMovement, y: heightMovementData, autoAlpha: 1, ease: Circ.easeIn })
+      .to(softwareButton, 1.5, { x: widthMovement, y: heightMovementSoftware, autoAlpha: 1, ease: Circ.easeIn }, "-=.5")
+      .to(titleContainer, 1, { autoAlpha: 1 })
       .to(title, 1.5, { autoAlpha: 1 }, "-=.5")
-      .to(explainationText, 1, {autoAlpha: 1}, "-=1.3")
-      .to(particleEffect, 3, {autoAlpha: 1}, "-=4");
-
-});
+      .to(explainationText, 1, { autoAlpha: 1 }, "-=1.3")
+      .to(particleEffect, 3, { autoAlpha: 1 }, "-=4");
+}
 
 function configParticles() {
    // ParticlesJS Config.
@@ -158,24 +162,31 @@ function configParticles() {
 }
 
 
+//Checks whether to current user is on a mobile
+//platform
+function isMobile(){
+	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 //switch to analysis page after fade out
-function switchExploratory(){
-   let timeline = new TimelineLite({onComplete:function () {
-      document.location.href = "htmlPages/analysis.html";
-   }});
+function switchExploratory() {
+   let timeline = new TimelineLite({
+      onComplete: function() {
+         document.location.href = "htmlPages/analysis.html";
+      }
+   });
 
    let page = $("body");
-   timeline.to(page, .5, {autoAlpha: 0});
+   timeline.to(page, .5, { autoAlpha: 0 });
 }
 
 //swich to software dev page
-function switchSoftware(){
-let timeline = new TimelineLite({onComplete:function () {
-      document.location.href = "htmlPages/software.html";
-   }});
+function switchSoftware() {
+   let timeline = new TimelineLite({
+      onComplete: function() {
+         document.location.href = "htmlPages/software.html";
+      }
+   });
 
    let page = $("body");
-   timeline.to(page, .5, {autoAlpha: 0});
+   timeline.to(page, .5, { autoAlpha: 0 });
 }
-
-window.onunload = function(){};
