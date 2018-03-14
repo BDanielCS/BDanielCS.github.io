@@ -157,6 +157,7 @@ function configParticles() {
    });
 }
 
+
 //switch to analysis page after fade out
 function switchExploratory(){
    let timeline = new TimelineLite({onComplete:function () {
@@ -176,3 +177,5 @@ let timeline = new TimelineLite({onComplete:function () {
    let page = $("body");
    timeline.to(page, .5, {autoAlpha: 0});
 }
+
+window.onunload = function(){};

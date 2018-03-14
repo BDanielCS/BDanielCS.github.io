@@ -70,3 +70,5 @@ function mySite() {
    let page = $("body");
    timeline.to(page, .5, { autoAlpha: 0 });
 }
+
+window.onunload = function(){};
