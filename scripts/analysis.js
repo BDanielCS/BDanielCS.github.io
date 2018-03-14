@@ -1,16 +1,11 @@
 // Fade in functionality on page load
+history.navigationMode = 'compatible';
+
 // load in each item with its successor loading after
 $(document).ready(function() {
    globalFadeIn();
-   sessionStorage.setItem("analysisLoad", true);
 });
 
-//back button refresh page
-function triggerAnalysis(){
-	if(sessionStorage.analysisLoad){
-		globalFadeIn();
-	}
-}
 
 //load the jumbotron, main body text, and bottom
 // section in

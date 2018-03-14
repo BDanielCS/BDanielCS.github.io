@@ -1,6 +1,7 @@
+history.navigationMode = 'compatible';
+
 $(document).ready(function() {
    pageFadeIn();
-   sessionStorage.setItem("softwareLoad", true);
 });
 
 // fade in all items of the page
@@ -20,13 +21,6 @@ function pageFadeIn() {
       .to(site, 1.2, { autoAlpha: 1 }, "-=1")
       .to(aiProject, 1.2, { autoAlpha: 1 }, "-=.8")
       .to(foot, 1, { autoAlpha: 1 });
-}
-
-//back button refresh page
-function triggerSoftware(){
-	if(sessionStorage.softwareLoad){
-		pageFadeIn();
-	}
 }
 
 //transition back to home page
