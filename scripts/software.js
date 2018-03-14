@@ -1,5 +1,6 @@
 $(document).ready(function() {
    pageFadeIn();
+   sessionStorage.setItem("softwareLoad", true);
 });
 
 // fade in all items of the page
@@ -21,14 +22,18 @@ function pageFadeIn() {
       .to(foot, 1, { autoAlpha: 1 });
 }
 
+//back button refresh page
+function triggerSoftware(){
+	if(sessionStorage.softwareLoad){
+		pageFadeIn();
+	}
+}
+
 //transition back to home page
 function switchHome() {
    let timeline = new TimelineLite({
       onComplete: function() {
          document.location.href = "../index.html";
-         $.getScript('index.js', function() {
-            homeScreenFadeIn();
-         });
       }
    });
 
@@ -47,9 +52,6 @@ function switchAnalysis() {
    let timeline = new TimelineLite({
       onComplete: function() {
          document.location.href = "./analysis.html";
-         $.getScript('analysis.js', function() {
-            globalFadeIn();
-         });
       }
    });
 

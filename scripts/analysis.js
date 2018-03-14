@@ -2,7 +2,15 @@
 // load in each item with its successor loading after
 $(document).ready(function() {
    globalFadeIn();
+   sessionStorage.setItem("analysisLoad", true);
 });
+
+//back button refresh page
+function triggerAnalysis(){
+	if(sessionStorage.analysisLoad){
+		globalFadeIn();
+	}
+}
 
 //load the jumbotron, main body text, and bottom
 // section in
@@ -28,9 +36,6 @@ function switchHome() {
    let timeline = new TimelineLite({
       onComplete: function() {
          document.location.href = "../index.html";
-         $.getScript('index.js', function() {
-            homeScreenFadeIn();
-         });
       }
    });
 
@@ -44,9 +49,6 @@ function switchSoftware() {
    let timeline = new TimelineLite({
       onComplete: function() {
          document.location.href = "./software.html";
-         $.getScript('software.js', function() {
-            globalFadeIn();
-         });
       }
    });
 

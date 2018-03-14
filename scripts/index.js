@@ -3,7 +3,15 @@
  */
 $(document).ready(function() {
 	homeScreenFadeIn();
+	sessionStorage.setItem("mainLoad", true);
 });
+
+//back button refresh page
+function triggerPage(){
+	if(sessionStorage.mainLoad){
+		homeScreenFadeIn();
+	}
+}
 
 // start up background animation and
 // begin button animations
